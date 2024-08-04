@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="stylesheet" href="./styles/chat.css" />
-
+    <link rel="stylesheet" href="./styles/homepage.css" />
     <title>Juyoen</title>
   </head>
   <body>
@@ -19,7 +18,7 @@
           </div>
           <div class="navigation_link d-flex">
             <a href="/index.html">HOME</a>
-            <a href="#cards">CARDS</a>
+            <a href="/cards.html">CARDS</a>
             <a href="#invite">INVITE JUYOEN</a>
             <a href="#discord">DISCORD</a>
             <a href="./chat.html">CHAT</a>
@@ -30,7 +29,7 @@
             <a href="#login">Login</a>
           </div>
           <div class="navigation_toggler">
-            <img src="/assets/menuBar.png" alt="menu" />
+            <img src="/assets/menu.png" alt="menu" />
           </div>
           <div class="responsive_naviagation flex-col">
             <div class="navigation_link d-flex flex-col">
@@ -42,13 +41,134 @@
             <div class="login btn-purple rounded cursor-pointer">
               <a href="#login">Login</a>
             </div>
+            <div class="close">
+              <img src="./assets/close.png" alt="close" />
+            </div>
           </div>
         </div>
       </nav>
     </header>
-    <main class="container">
+    <main class="container homepage-container">
       <!-- page -->
+      <div class="page homepage">
+        <div class="hero-section">
+          <div class="heading">Welcome to Juyeon</div>
+          <p class="subheading">
+            Juyeon is a versatile Discord bot where you can collect beautiful
+            Korean idol cards, chat with virtual idols, engage in exciting
+            battles, and much more.
+          </p>
+          <div class="cards">
+            <div class="floating-card card-1">
+              <img src="/assets/home_card.png" alt="idol" />
+            </div>
+            <div class="floating-card card-2">
+              <img src="/assets/home_card.png" alt="idol" />
+            </div>
+            <div class="floating-card card-3">
+              <img src="/assets/home_card.png" alt="idol" />
+            </div>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="state-card">
+            <div class="icon icon-1">
+              <img src="./assets/feature-icons/add.png" alt="img" />
+            </div>
+            <div class="content">
+              <div class="numbers users">+<span>52,762</span></div>
+              <div class="label">ACTIVE USERS</div>
+            </div>
+          </div>
+          <div class="state-card">
+            <div class="icon">
+              <img src="./assets/feature-icons/card.png" alt="img" />
+            </div>
+            <div class="content">
+              <div class="numbers cards-numbers">+<span>8,347,411</span></div>
+              <div class="label">ACTIVE USERS</div>
+            </div>
+          </div>
+        </div>
+        <div class="invite-button button-64">INIVITE JUYEON</div>
+        <div class="stamp">JUYEON ® Corp. Access Control ™</div>
+      </div>
     </main>
+    <div class="scroll-wrapper">
+      <div class="scrolling-features">
+        <div class="feature">
+          <img src="./assets/feature-icons/heart.png" alt="heart" />
+          <div class="lable">WHISHLIST</div>
+        </div>
+        <div class="feature">
+          <img src="./assets/feature-icons/human-resources.png" alt="heart" />
+          <div class="lable">PROFILE SEARCH</div>
+        </div>
+        <div class="feature">
+          <img src="./assets/feature-icons/banknote.png" alt="heart" />
+          <div class="lable">OWN CURRENCY</div>
+        </div>
+        <div class="feature">
+          <img src="./assets/feature-icons/diamond.png" alt="heart" />
+          <div class="lable">PRIMIUM CURRENCY</div>
+        </div>
+        <div class="feature">
+          <img
+            src="./assets/feature-icons/product-management.png"
+            alt="heart"
+          />
+          <div class="lable">INVENTORY</div>
+        </div>
+        <div class="feature">
+          <img src="./assets/feature-icons/store.png" alt="heart" />
+          <div class="lable">ITEM STORE</div>
+        </div>
+        <div class="feature">
+          <img src="./assets/feature-icons/team.png" alt="heart" />
+          <div class="lable">CO-OP</div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="glow-blue"></div> -->
+    <!-- <div class="scrolling-features">
+      <div class="feature">
+        <img src="./assets/heart.png" alt="heart">
+        <div class="lable">
+          WHISHLIST
+        </div>
+      </div>
+      <div class="feature">
+        <img src="./assets/heart.png" alt="heart">
+        <div class="lable">
+          WHISHLIST
+        </div>
+      </div><div class="feature">
+        <img src="./assets/heart.png" alt="heart">
+        <div class="lable">
+          WHISHLIST
+        </div>
+      </div><div class="feature">
+        <img src="./assets/heart.png" alt="heart">
+        <div class="lable">
+          WHISHLIST
+        </div>
+      </div><div class="feature">
+        <img src="./assets/heart.png" alt="heart">
+        <div class="lable">
+          WHISHLIST
+        </div>
+      </div><div class="feature">
+        <img src="./assets/heart.png" alt="heart">
+        <div class="lable">
+          WHISHLIST
+        </div>
+      </div><div class="feature">
+        <img src="./assets/heart.png" alt="heart">
+        <div class="lable">
+          WHISHLIST
+        </div>
+      </div>
+    </div> -->
     <!-- <footer>
       <div class="container footer-container">
         <span>Privacy policie</span>
@@ -56,6 +176,7 @@
         <span>JUYEON ® Corp. Access Control ™</span>
       </div>
     </footer> -->
-    <script src="./js/index.mjs"></script>
+    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/hompage.js"></script>
   </body>
 </html>

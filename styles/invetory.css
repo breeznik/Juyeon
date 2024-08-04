@@ -1,10 +1,10 @@
-.glow{
+.glow {
   position: absolute;
   filter: blur(600px);
-  background-color: #2D3038;
+  background-color: #2d3038;
   top: 0;
-  width: 1000px;
-  height: 1000px;
+  width: 80vw;
+  height: calc(100vh - 80px);
   z-index: -1;
 }
 .inventory {
@@ -106,7 +106,7 @@
     }
   }
   &.active {
-    bottom: 65px;
+    bottom: 50px;
     opacity: 1;
     z-index: 0;
   }
@@ -118,6 +118,7 @@
     border-radius: 15px;
     cursor: pointer;
     background-color: #28292b;
+
     img {
       width: 36px;
       height: auto;
@@ -137,7 +138,7 @@
         background-color: white;
         .toggle_ball {
           background-color: black;
-          margin-left: calc(100% - 8px);;
+          margin-left: calc(100% - 8px);
         }
       }
     }
@@ -196,7 +197,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      touch-action:cross-slide-x;
+      touch-action: cross-slide-x;
     }
     .pagination-right {
       display: flex;
@@ -295,7 +296,11 @@
   }
 }
 
-
+@media (max-width: 1080px) {
+  .inventory_container {
+    overflow: hidden;
+  }
+}
 
 @media (max-width: 768px) {
   .inventory_container {
@@ -303,7 +308,8 @@
   }
   .inventory {
     border-radius: 0px !important;
-    max-height: calc(100vh - 73px);
+    height: calc(100vh - 73px);
+    max-height: 100%;
   }
   .top {
     .media {
@@ -314,14 +320,16 @@
   .bottom .right {
     display: none;
   }
-  .settings-section{
+  .settings-section {
     gap: 20px;
   }
-  .boost-card{
+  .boost-card {
     display: flex !important;
   }
+  .glow {
+    display: none;
+  }
 }
-
 
 @media (max-width: 576px) {
   .top {
@@ -333,9 +341,15 @@
   .settings-wrapper {
     max-width: 100%;
   }
-  .bottom .center {
-    width: 100%;
-    max-width: 320px !important;
+  .bottom {
+    padding: 5px 15px;
+    .center {
+      width: 100%;
+      max-width: 320px !important;
+    }
   }
+}
 
+.responsive_naviagation {
+  background: rgba(0, 0, 0, 0.8) !important;
 }

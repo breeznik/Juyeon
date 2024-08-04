@@ -8,8 +8,9 @@ const totalPage = pageNum_Wrapper.children.length;
 const forward = document.querySelector(".forward-icon");
 const backward = document.querySelector(".backward-icon");
 let pageNumber = 0;
-let touchStartX_is = 0;
-let touchDragX_is = 0;
+// let touchStartX_is = 0;
+// let touchDragX_is = 0;
+const filterCard = document.querySelectorAll(".filter-card");
 
 const toggleHandler = (element) => {
   const selectedElement = document.querySelector(element);
@@ -25,18 +26,18 @@ const toggleHandler = (element) => {
 const menuToggler = () => {
   const menu = document.querySelector(".menu-button");
   const settings = document.querySelector(".settings-wrapper");
-  const media = document.querySelector('.media-section')
+  const media = document.querySelector(".media-section");
   menu.addEventListener("click", () => {
     if (menu.classList.contains("active")) {
       menu.classList.remove("active");
       settings.classList.remove("active");
-      media.style.opacity = '1';
-      media.style.filter = 'none';
+      media.style.opacity = "1";
+      media.style.filter = "none";
     } else {
       menu.classList.add("active");
       settings.classList.add("active");
-      media.style.opacity = '0.3';
-      media.style.filter = 'blur(10px)';
+      media.style.opacity = "0.3";
+      media.style.filter = "blur(10px)";
     }
   });
 };
@@ -69,14 +70,20 @@ const debounce = (func, delay) => {
   };
 };
 const playback = () => {
-  forward.addEventListener("click", debounce(() => {
-    // pageNumber = totalPage - 2;
-    wheelHandler();
-  } , 50));
-  backward.addEventListener("click", debounce(() => {
-    // pageNumber = 1;
-    wheelHandler(paginationAction.dec);
-  } , 50));
+  forward.addEventListener(
+    "click",
+    debounce(() => {
+      // pageNumber = totalPage - 2;
+      wheelHandler();
+    }, 50)
+  );
+  backward.addEventListener(
+    "click",
+    debounce(() => {
+      // pageNumber = 1;
+      wheelHandler(paginationAction.dec);
+    }, 50)
+  );
 };
 
 // const dragHandler = () => {
@@ -126,4 +133,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // dragHandler();
   playback();
+
+  //filter toggle
+  filterCard.forEach((filter) => {
+    toggleHandler(`.${filter.classList[1]}`)
+  });
 });
