@@ -1,0 +1,254 @@
+.chat {
+  max-height: 84vh;
+  /* min-height: 800px; */
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+  background: var(--background-1);
+  box-shadow: 0px 0px 2px 0px rgba(255, 255, 255, 0.25);
+  position: relative;
+
+  /* top */
+  .top {
+    max-height: calc(100% - 51px);
+    overflow-y: auto;
+  }
+  .messages {
+    padding: 15px 20px;
+    gap: 20px;
+    height: fit-content;
+    margin-top: auto;
+    /* justify-content: end; */
+  }
+  .message-wrapper {
+    gap: 10px;
+    animation: springIn 0.5s ease-out;
+    max-width: 70%;
+  }
+  .message {
+    padding: 8px 15px;
+    word-break: break-word;
+  }
+  .messages .username {
+    font-size: 13px;
+    color: #8e8d94;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .from-user {
+    align-self: flex-end;
+    align-items: center;
+  }
+  .from-user .message {
+    background-color: var(--gray-4);
+  }
+  .from-user .username {
+    text-align: end;
+    margin-right: 8px;
+  }
+  .to-user .username {
+    margin-left: 8px;
+  }
+  .to-user {
+    align-self: flex-start;
+    align-items: center;
+  }
+  .profile img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+
+  /* bottom */
+  .bottom {
+    background-color: var(--gray);
+    padding: 15px;
+    gap: 15px;
+    align-items: center;
+  }
+  .media {
+    height: 20px;
+    img {
+      height: inherit;
+      width: auto;
+      object-fit: contain;
+    }
+  }
+  .chat_input {
+    position: relative;
+  }
+  .bottom span {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 14px;
+    color: gray;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .input_div {
+    z-index: 10;
+    outline: none;
+    margin: auto;
+    overflow-wrap: break-word; /* Ensures long words break and wrap */
+    word-wrap: break-word; /* Ensures compatibility with older browsers */
+    word-break: break-word; /* Ensures text will break to prevent overflow */
+    white-space: pre-wrap; /* Preserves whitespace and wraps text */
+    max-height: 200px;
+    overflow-y: scroll;
+  }
+
+  .ps_button {
+    position: relative;
+    /* right: 20px; */
+    /* top: 20px; */
+    cursor: pointer;
+    z-index: 2;
+    backdrop-filter: blur(4px);
+    img {
+      width: 30px;
+      height: 30px;
+    }
+    span {
+      position: absolute;
+      display: inline-block;
+      opacity: 0;
+      overflow: hidden;
+      transition: 0.3s ease-in-out width, height, opacity, margin;
+      text-wrap: nowrap;
+      left: -125px;
+      background-color: var(--gray);
+      backdrop-filter: blur(4px);
+      padding: 0px 10px;
+      cursor: pointer;
+    }
+
+    &:hover {
+      span {
+        width: 110px;
+        /* height: 30px; Replace with the desired height */
+        opacity: 1;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .profile_settings {
+    z-index: 15;
+    position: absolute;
+    opacity: 0;
+    right: -100%;
+    height: 100%;
+    background: var(--background-glass);
+    backdrop-filter: blur(33px);
+    padding: 50px;
+    max-width: 40%;
+    width: 100%;  
+    transition: all 0.3s ease-in-out;
+    .avatar {
+      margin: auto;
+      width: 100%;
+      max-width: 220px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    .input_group {
+      gap: 15px;
+      .input_wrapper {
+        border-bottom: 1px solid rgba(221, 221, 221, 0.5);
+        height: 50px;
+        display: flex;
+        align-items: end;
+        padding-bottom: 10px;
+        background: var(--background-glass-2);
+      }
+      input {
+        color: white;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        width: 100%;
+      }
+      /* input::placeholder {
+          color: white;
+        } */
+      .description_wrapper {
+        border-bottom: 1px solid rgba(221, 221, 221, 0.5);
+        background: var(--background-glass-2);
+        padding-bottom: 10px;
+        position: relative;
+      }
+      .description_div {
+        width: 100%;
+        height: 150px;
+        align-items: end;
+        word-break: break-word;
+        overflow-y: auto;
+        outline: none;
+      }
+      .desc_placeholder {
+        position: absolute;
+        bottom: 10px;
+        color: gray;
+        font-weight: 400;
+      }
+    }
+    .buttons {
+      margin-top: 58px;
+      display: flex;
+      align-items: end;
+      justify-content: end;
+      gap: 20px;
+      button {
+        cursor: pointer;
+        font-size: 16px;
+        max-width: 120px;
+        width: 100%;
+        padding: 8px 0px;
+        border: none;
+        border-radius: 5px;
+        color: var(--light-gray);
+        flex: 1;
+        &:last-child {
+          background-color: black;
+        }
+      }
+    }
+  }
+  .profile_settings_active {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+@keyframes springIn {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+  .chat {
+    border-radius: 0px !important;
+    max-height: calc(100vh - 73px);
+    .profile_settings {
+      max-width: 100%;
+    }
+  }
+  .chat-container{
+    padding: 0 !important;
+  }
+}

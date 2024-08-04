@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/chat.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+
+    <title>Juyoen</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div
+          class="container d-flex align-items-center justify-content-between color-lightgray w-inherit h-inherit"
+        >
+          <div class="logo">
+            <img src="./assets/logo.png" alt="logo" />
+          </div>
+          <div class="navigation_link d-flex">
+            <a href="./homepage.html">HOME</a>
+            <a href="#cards">CARDS</a>
+            <a href="#invite">INVITE JUYOEN</a>
+            <a href="#discord">DISCORD</a>
+            <a href="./chat.html">CHAT</a>
+            <a href="./inventory.html">INVENTORY</a>
+          </div>
+          <div class="lg-login login btn-purple rounded cursor-pointer">
+            <a href="#login">Login</a>
+          </div>
+          <div class="navigation_toggler">
+            <img src="/assets/menuBar.png" alt="menu" />
+          </div>
+          <!-- <div class="responsive_naviagation flex-col">
+            <div class="navigation_link d-flex flex-col">
+              <a href="#home">HOME</a>
+              <a href="#invite">INVITE JUYOEN</a>
+              <a href="#discord">DISCORD</a>
+              <a href="./invetnory.html">CARDS</a>
+            </div>
+            <div class="login btn-purple rounded cursor-pointer">
+              <a href="#login">Login</a>
+            </div>
+          </div> -->
+        </div>
+      </nav>
+    </header>
+    <main class="">
+      <div class="container chat-container">
+        <!-- page -->
+        <div class="page chat-page d-flex">
+          <div class="chat d-flex flex-col rounded-m">
+            <!-- message -->
+            <div class="top d-flex flex-auto">
+              <div class="messages d-flex w-100 flex-col">
+                <!-- user message -->
+                <!-- <div class="message-wrapper d-flex from-user color-lightgray">
+                <div class="info">
+                  <div class="username">Breez_nik</div>
+                  <div class="message rounded-m">user message1</div>
+                </div>
+                <div class="profile">
+                  <img src="/assets/profile.png" alt="profile" />
+                </div>
+              </div> -->
+                <!-- reply message -->
+                <!-- <div class="message-wrapper d-flex to-user color-lightgray">
+                <div class="profile">
+                  <img src="/assets/profile.png" alt="profile" />
+                </div>
+                <div class="info">
+                  <div class="username">Breez_nik</div>
+                  <div class="message rounded-m btn-purple color-white">
+                    reply message
+                  </div>
+                </div>
+              </div> -->
+              </div>
+            </div>
+            <!-- input -->
+            <div class="bottom d-flex color-lightgray">
+              <div class="media">
+                <img src="/assets/clip.png" alt="clip" />
+              </div>
+              <div class="chat_input w-100 h-100">
+                <div class="input_div w-100 h-100" contenteditable="true"></div>
+                <span class="input_placeholder"
+                  >Type Your Message Here....</span
+                >
+              </div>
+              <div class="ps_button d-flex color-white align-items-center">
+                <img src="/assets/settings.png" alt="settings" />
+              </div>
+            </div>
+            <div
+              class="profile_settings h-100 color-white d-flex align-items-center"
+            >
+              <div class="settings_wrapper w-100 d-flex flex-col">
+                <div class="avatar">
+                  <img src="/assets/profile.png" alt="profile" />
+                </div>
+                <div class="input_group d-flex flex-col">
+                  <div class="input_wrapper">
+                    <input type="text" placeholder="Avatar Link" />
+                  </div>
+                  <div class="input_wrapper nickname">
+                    <input type="text" placeholder="Nickname" />
+                  </div>
+                  <div class="description_wrapper">
+                    <div
+                      contenteditable="true"
+                      class="description_div d-flex"
+                    ></div>
+                    <span class="desc_placeholder">Description</span>
+                  </div>
+                </div>
+                <div class="buttons">
+                  <button class="btn-purple">Save</button>
+                  <button>Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/index.js"></script>
+    <script src="./js/chat.js"></script>
+  </body>
+</html>

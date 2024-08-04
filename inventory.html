@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/invetory.css" />
+    <title>Juyoen</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div
+          class="container d-flex align-items-center justify-content-between color-lightgray w-inherit h-inherit"
+        >
+          <div class="logo">
+            <img src="../assets/logo.png" alt="logo" />
+          </div>
+          <div class="navigation_link d-flex">
+            <a href="./homepage.html">HOME</a>
+            <a href="#cards">CARDS</a>
+            <a href="#invite">INVITE JUYOEN</a>
+            <a href="#discord">DISCORD</a>
+            <a href="./chat.html">CHAT</a>
+            <a href="./inventory.html">INVENTORY</a>
+            <a href="./commands.html">COMMANDS</a>
+
+          </div>
+          <div class="lg-login login btn-purple rounded cursor-pointer">
+            <a href="#login">Login</a>
+          </div>
+          <div class="navigation_toggler">
+            <img src="/assets/menuBar.png" alt="menu" />
+          </div>
+          <!-- <div class="responsive_naviagation flex-col">
+            <div class="navigation_link d-flex flex-col">
+              <a href="#home">HOME</a>
+              <a href="#invite">INVITE JUYOEN</a>
+              <a href="#discord">DISCORD</a>
+              <a href="#cards">CARDS</a>
+            </div>
+            <div class="login btn-purple rounded cursor-pointer">
+              <a href="#login">Login</a>
+            </div>
+          </div> -->
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container inventory_container">
+        <!-- page -->
+        <div class="page iventory-page d-flex">
+          <div class="inventory d-flex flex-col rounded-m">
+            <div class="top media-section">
+              <div class="media_section">
+                <div class="media_wrapper">
+                  <!-- <img class="border media" src="/assets/idol1.webp" alt="img" /> -->
+                  <video
+                    class="media"
+                    autoplay="true"
+                    loop=""
+                    muted=""
+                    playsinline=""
+                  >
+                    <source src="./assets/9.mp4" type="video/mp4" />
+                  </video>
+                </div>
+                <div class="media_wrapper">
+                  <img class="media" src="/assets/idol1.webp" alt="img" />
+                </div>
+                <div class="media_wrapper">
+                  <img class="media" src="/assets/idol1.webp" alt="img" />
+                </div>
+                <div class="media_wrapper">
+                  <img class="media" src="/assets/idol1.webp" alt="img" />
+                </div>
+                <div class="media_wrapper">
+                  <img class="media" src="/assets/idol1.webp" alt="img" />
+                </div>
+                <div class="media_wrapper">
+                  <img class="media" src="/assets/idol1.webp" alt="img" />
+                </div>
+                <div class="media_wrapper">
+                  <img class="media" src="/assets/idol1.webp" alt="img" />
+                </div>
+                <div class="media_wrapper">
+                  <img class="media" src="/assets/idol1.webp" alt="img" />
+                </div>
+                <div class="media_wrapper">
+                  <img class="media" src="/assets/idol1.webp" alt="img" />
+                </div>
+                <div class="media_wrapper">
+                  <img class="media" src="/assets/idol1.webp" alt="img" />
+                </div>
+              </div>
+            </div>
+
+            <div class="bottom settings-section">
+              <div class="left menu-button">
+                <img src="/assets/menu_disabled.png" alt="menu" />
+              </div>
+              <div class="center">
+                <div class="pagination-wrapper">
+                  <div class="fbicon backward-icon">
+                    <img src="/assets/backwards.png" alt="backwards" />
+                  </div>
+                  <div class="pagination-right">
+                    <div class="numbers-wrapper">
+                      <span class="page-number active">1</span>
+                      <span class="page-number">2</span>
+                      <span class="page-number">3</span>
+                      <span class="page-number">4</span>
+                      <span class="page-number">5</span>
+                      <span class="page-number">6</span>
+                      <span class="page-number">7</span>
+                      <span class="page-number">8</span>
+                      <span class="page-number">9</span>
+                      <span class="page-number">9</span>
+                      <span class="page-number">9</span>
+                      <span class="page-number">9</span>
+                      <span class="page-number">9</span>
+                      <span class="page-number">9</span>
+                    </div>
+                    <div class="forward-icon">
+                      <img src="/assets/forwards.png" alt="forwards" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="right boost_mode_wrapper">
+                <img src="/assets/space-travel.png" alt="boost-mode" />
+                <div class="toggle_div">
+                  <div class="toggle_ball"></div>
+                </div>
+              </div>
+            </div>
+            <div class="settings-wrapper">
+              <div class="wrapper_heading">SETTINGS</div>
+              <div class="settings">
+                <div class="filter">
+                  <div class="heading">CARD FILTER</div>
+                  <div class="filter-card">
+                    <!-- <input id="animation-filter" type="checkbox" /> -->
+                    <span for="animation-filter">Animated Cards</span>
+                  </div>
+                  <div class="filter-card">
+                    <!-- <input id="custom-filter" type="checkbox" /> -->
+                    <span for="custom-filter">Custom Cards</span>
+                    <img src="/assets/check.png" alt="check" />
+                  </div>
+                </div>
+                <div class="boost-card">
+                  <!-- <input id="custom-filter" type="checkbox" /> -->
+                  <div class="left">
+                    <img src="/assets/space-travel.png" alt="boost-mode" />
+                    FAST MODE
+                  </div>
+                  <div class="toggle_div">
+                    <div class="toggle_ball"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="glow"></div>
+      </div>
+    </main>
+    <script src="./js/index.js"></script>
+    <script src="./js/inventory.js"></script>
+  </body>
+</html>
