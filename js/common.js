@@ -1,3 +1,4 @@
+
 // navigation variables
 const menu = document.querySelector(".navigation_toggler");
 const close = document.querySelector('.close')
@@ -20,3 +21,5 @@ document.addEventListener("DOMContentLoaded", () => {
   menu.addEventListener("click", () => toggler(reponsiveNav));
   close.addEventListener("click", () => toggler(reponsiveNav));
 });
+
+

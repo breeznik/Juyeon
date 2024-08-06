@@ -186,6 +186,9 @@ nav {
 }
 nav .navigation_link {
   gap: 40px;
+  a{
+    font-size: 18px;
+  }
 }
 nav .logo img {
   height: 18px;
