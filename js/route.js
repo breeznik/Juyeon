@@ -23,7 +23,7 @@ const filePaths = {
   cards: "./cards.html",
   invite: "/",
   discord: "/",
-  info: "/",
+  info: "./info.html",
   inventory: "./inventory.html",
   chat: "./chat.html",
 };
@@ -37,7 +37,8 @@ const linkWrapper = document.querySelector(".navigation_link");
 const ResponsiveLinkWrapper = document.querySelector(".responsive_navlinks");
 const loginButton = document.querySelector(".login");
 const ResponsiveLoginButton = document.querySelector(".responsive_login");
-
+const user_profile_display = document.querySelector(".user_profile");
+const popup_login = document.querySelector(".popup-logout");
 
 // Set your login status on this variable
 let user = localStorage.getItem("user");
@@ -58,7 +59,7 @@ const refresher = () => {
   user = localStorage.getItem("user");
   isLoggedIn = user ? true : false;
   currentLinks = isLoggedIn ? afterLogin : beforeLogin;
-  console.log(user);
+  console.log("userd data ", user);
 };
 
 const loginChecker = () => {
@@ -72,32 +73,32 @@ const loginChecker = () => {
 };
 const logginerToggler = () => {
   if (isLoggedIn) {
-    loginButton.innerText = logStatsuConst.logout;
+    // loginButton.innerText = logStatsuConst.logout;
+    loginButton.style.display = "none";
     ResponsiveLoginButton.innerText = logStatsuConst.logout;
+    user_profile_display?.classList.add("active");
   } else {
     loginButton.innerText = logStatsuConst.login;
+    loginButton.style.display = "block";
     ResponsiveLoginButton.innerText = logStatsuConst.login;
+    user_profile_display?.classList.remove("active");
   }
 };
+
+const loginFunctionSeries = () => {
+  // update
+  loginChecker();
+  refresher();
+
+  // render
+  routeRenderer();
+  logginerToggler();
+};
 const login = () => {
-  loginButton.addEventListener("click", () => {
-    // update
-    loginChecker();
-    refresher();
-    
-    // render
-    routeRenderer();
-    logginerToggler();
-  });
-  ResponsiveLoginButton.addEventListener('click' , () =>{
-    // update
-    loginChecker();
-    refresher();
-    
-    // render
-    routeRenderer();
-    logginerToggler();
-  })
+  loginButton.addEventListener("click", () => loginFunctionSeries());
+  popup_login.addEventListener("click", () => loginFunctionSeries());
+  ResponsiveLoginButton.addEventListener("click", () => loginFunctionSeries());
+
   //initial render
   refresher();
   logginerToggler();

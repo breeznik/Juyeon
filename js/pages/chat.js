@@ -139,8 +139,29 @@ const settingsToggler = () => {
   btns.addEventListener("click", toggler);
 };
 
+// JavaScript function to show/hide the typing indicator
+function setupTypingIndicator(inputId, indicatorId, timeout) {
+  const inputElement = document.querySelector(inputId);
+  const indicatorElement = document.querySelector(indicatorId);
+  let typingTimeout;
+
+  inputElement.addEventListener('input', () => {
+      // Show the typing indicator
+      indicatorElement.style.display = 'flex';
+
+      // Clear the previous timeout
+      clearTimeout(typingTimeout);
+
+      // Set a new timeout to hide the typing indicator
+      typingTimeout = setTimeout(() => {
+          indicatorElement.style.display = 'none';
+      }, timeout);
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   chatInputHandler();
   initialMessageRenderer();
   settingsToggler();
+  setupTypingIndicator('.input_div', '.typing_user', 1000);
 });

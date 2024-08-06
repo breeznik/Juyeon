@@ -23,6 +23,13 @@
           <div class="lg-login login btn-purple rounded cursor-pointer">
             Login
           </div>
+          <div class="user_profile lg-login">
+            <img src="/assets/profile.png" alt="profile" />
+            <div class="username">breeznik</div>
+            <div class="lg-login rounded cursor-pointer popup-logout">
+              Logout
+            </div>
+          </div>
           <div class="navigation_toggler">
             <img src="/assets/menu.png" alt="menu" />
           </div>
@@ -33,9 +40,16 @@
               <a href="#discord">DISCORD</a>
               <a href="./invetnory.html">CARDS</a>
             </div>
-            <div class="login responsive_login btn-purple rounded cursor-pointer">
+            <div class="user_profile">
+              <img src="/assets/profile.png" alt="profile" />
+              <div class="username">breeznik</div>
+            </div>
+            <div
+              class="login responsive_login btn-purple rounded cursor-pointer popup-logout"
+            >
               Login
             </div>
+
             <div class="close">
               <img src="./assets/close.png" alt="close" />
             </div>
@@ -73,6 +87,59 @@
                   </div>
                 </div>
               </div> -->
+
+                <div
+                  class="typing_user message-wrapper d-flex from-user color-lightgray"
+                >
+                  <div class="info">
+                    <div class="username">Breez_nik</div>
+                    <div class="message rounded-m flex-all">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="50px"
+                        height="20px"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle cx="18" cy="12" r="0" fill="currentColor">
+                          <animate
+                            attributeName="r"
+                            begin=".67"
+                            calcMode="spline"
+                            dur="1.5s"
+                            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+                            repeatCount="indefinite"
+                            values="0;2;0;0"
+                          />
+                        </circle>
+                        <circle cx="12" cy="12" r="0" fill="currentColor">
+                          <animate
+                            attributeName="r"
+                            begin=".33"
+                            calcMode="spline"
+                            dur="1.5s"
+                            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+                            repeatCount="indefinite"
+                            values="0;2;0;0"
+                          />
+                        </circle>
+                        <circle cx="6" cy="12" r="0" fill="currentColor">
+                          <animate
+                            attributeName="r"
+                            begin="0"
+                            calcMode="spline"
+                            dur="1.5s"
+                            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+                            repeatCount="indefinite"
+                            values="0;2;0;0"
+                          />
+                        </circle>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="profile">
+                    <img src="/assets/profile.png" alt="profile" />
+                  </div>
+                </div>
               </div>
             </div>
             <!-- input -->
@@ -123,6 +190,9 @@
         </div>
       </div>
     </main>
+    <div class="glow-blue">
+      <img src="/assets/home_glow.png" alt="glow" />
+    </div>
     <script type="module" src="./js/common.js"></script>
     <script type="module" src="./js/route.js"></script>
     <script type="module" src="./js/pages/chat.js"></script>

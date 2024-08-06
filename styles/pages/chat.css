@@ -1,3 +1,6 @@
+body{
+  background: var(--background-3) !important;
+}
 .chat {
   min-height: 80vh;
   max-height: 80vh;
@@ -6,7 +9,8 @@
   margin: auto;
   flex: auto;
   overflow: hidden;
-  background: var(--background-1);
+  /* background: var(--background-1); */
+  background: var(--background-4);
   box-shadow: 0px 0px 2px 0px rgba(255, 255, 255, 0.25);
   position: relative;
 
@@ -231,7 +235,19 @@
     right: 0;
   }
 }
-
+.glow-blue {
+  top: 70px;
+  position: absolute;
+  filter: blur(100px);
+  z-index: -1;
+  img{
+    width: 100vw;
+    height: 70vh;
+  }
+}
+.typing_user{
+  display: none;
+}
 @keyframes springIn {
     0% {
       transform: scale(0.5);
@@ -258,4 +274,5 @@
   .chat-container{
     padding: 0 !important;
   }
+  
 }

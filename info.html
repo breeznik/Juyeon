@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="stylesheet" href="./styles/pages/invetory.css" />
+    <link rel="stylesheet" href="./styles/pages/info.css" />
     <title>Juyoen</title>
   </head>
   <body>
@@ -22,6 +22,13 @@
           <div class="lg-login login btn-purple rounded cursor-pointer">
             Login
           </div>
+          <div class="user_profile lg-login">
+            <img src="/assets/profile.png" alt="profile" />
+            <div class="username">breeznik</div>
+            <div class="lg-login rounded cursor-pointer popup-logout">
+              Logout
+            </div>
+          </div>
           <div class="navigation_toggler">
             <img src="/assets/menu.png" alt="menu" />
           </div>
@@ -32,9 +39,16 @@
               <a href="#discord">DISCORD</a>
               <a href="./invetnory.html">CARDS</a>
             </div>
-            <div class="login responsive_login btn-purple rounded cursor-pointer">
+            <div class="user_profile">
+              <img src="/assets/profile.png" alt="profile" />
+              <div class="username">breeznik</div>
+            </div>
+            <div
+              class="login responsive_login btn-purple rounded cursor-pointer popup-logout"
+            >
               Login
             </div>
+
             <div class="close">
               <img src="./assets/close.png" alt="close" />
             </div>
@@ -43,128 +57,334 @@
       </nav>
     </header>
     <main>
-      <div class="container inventory_container">
+      <div class="container info-container">
         <!-- page -->
         <div class="page iventory-page d-flex">
-          <div class="inventory d-flex flex-col rounded-m">
-            <div class="top media-section">
-              <div class="media_section">
-                <div class="media_wrapper">
-                  <!-- <img class="border media" src="/assets/idol1.webp" alt="img" /> -->
-                  <video
-                    class="media"
-                    autoplay="true"
-                    loop=""
-                    muted=""
-                    playsinline=""
-                  >
-                    <source src="./assets/9.mp4" type="video/mp4" />
-                  </video>
-                </div>
-                <div class="media_wrapper">
-                  <img class="media" src="./assets/idol1.webp" alt="img" />
-                </div>
-                <div class="media_wrapper">
-                  <img class="media" src="./assets/idol1.webp" alt="img" />
-                </div>
-                <div class="media_wrapper">
-                  <img class="media" src="./assets/idol1.webp" alt="img" />
-                </div>
-                <div class="media_wrapper">
-                  <img class="media" src="./assets/idol1.webp" alt="img" />
-                </div>
-                <div class="media_wrapper">
-                  <img class="media" src="./assets/idol1.webp" alt="img" />
-                </div>
-                <div class="media_wrapper">
-                  <img class="media" src="./assets/idol1.webp" alt="img" />
-                </div>
-                <div class="media_wrapper">
-                  <img class="media" src="./assets/idol1.webp" alt="img" />
-                </div>
-                <div class="media_wrapper">
-                  <img class="media" src="./assets/idol1.webp" alt="img" />
-                </div>
-                <div class="media_wrapper">
-                  <img class="media" src="./assets/idol1.webp" alt="img" />
-                </div>
+          <div class="info-wrapper d-flex flex-col rounded-m">
+            <div class="pageHeading">WELCOME TO JUYEON CORP</div>
+            <div class="info">
+              <div class="heading">INTRODUCTION</div>
+              <div class="content">
+                Juyeon is a dynamic Discord bot that immerses users in a
+                vibrant, virtual idol-themed world. With features to collect,
+                trade, and manage idol cards, Juyeon offers a unique and
+                engaging experience. Its user-friendly commands and essential
+                permissions ensure smooth functionality for profile
+                customization, event participation, inventory management, and
+                reminders. Committed to community guidelines and providing
+                robust support, Juyeon is a must-have for anyone passionate
+                about virtual idol culture.
               </div>
             </div>
 
-            <div class="bottom settings-section">
-              <div class="left menu-button">
-                <img src="/assets/menu_disabled.png" alt="menu" />
-              </div>
-              <div class="center">
-                <div class="pagination-wrapper">
-                  <div class="fbicon backward-icon">
-                    <img src="/assets/backwards.png" alt="backwards" />
-                  </div>
-                  <div class="pagination-right">
-                    <div class="numbers-wrapper">
-                      <span class="page-number active">1</span>
-                      <span class="page-number">2</span>
-                      <span class="page-number">3</span>
-                      <span class="page-number">4</span>
-                      <span class="page-number">5</span>
-                      <span class="page-number">6</span>
-                      <span class="page-number">7</span>
-                      <span class="page-number">8</span>
-                      <span class="page-number">9</span>
-                      <span class="page-number">9</span>
-                      <span class="page-number">9</span>
-                      <span class="page-number">9</span>
-                      <span class="page-number">9</span>
-                      <span class="page-number">9</span>
-                    </div>
-                    <div class="forward-icon">
-                      <img src="/assets/forwards.png" alt="forwards" />
-                    </div>
+            <div class="accordians">
+              <div class="accordian">
+                <div class="header">
+                  <div class="name">Terms of Service</div>
+                  <div class="toggler">
+                    <img src="/assets/downarray.png" alt="arrow" />
                   </div>
                 </div>
-              </div>
-              <div class="right boost_mode_wrapper">
-                <img src="/assets/space-travel.png" alt="boost-mode" />
-                <div class="toggle_div">
-                  <div class="toggle_ball"></div>
+                <div class="content">
+                  <!-- <h2><strong>Terms and Conditions</strong></h2> -->
+
+                  <p>Welcome to Juyeon!</p>
+
+                  <p>
+                    These terms and conditions outline the rules and regulations
+                    for the use of Juyeon's Website and discord bot, located at
+                    discord.gg/juyeon.
+                  </p>
+
+                  <p>
+                    By accessing this Discord Bot we assume you accept these
+                    terms and conditions. Do not continue to use Juyeon if you
+                    do not agree to take all of the terms and conditions stated
+                    on this page.
+                  </p>
+
+                  <p>
+                    The following terminology applies to these Terms and
+                    Conditions, Privacy Statement and Disclaimer Notice and all
+                    Agreements: "Client", "You" and "Your" refers to you, the
+                    person log on this Discord Bot and compliant to the
+                    Company’s terms and conditions. "The Company", "Ourselves",
+                    "We", "Our" and "Us", refers to our Company. "Party",
+                    "Parties", or "Us", refers to both the Client and ourselves.
+                    All terms refer to the offer, acceptance and consideration
+                    of payment necessary to undertake the process of our
+                    assistance to the Client in the most appropriate manner for
+                    the express purpose of meeting the Client’s needs in respect
+                    of provision of the Company’s stated services, in accordance
+                    with and subject to, prevailing law of Netherlands. Any use
+                    of the above terminology or other words in the singular,
+                    plural, capitalization and/or he/she or they, are taken as
+                    interchangeable and therefore as referring to same. Our
+                    Terms and Conditions were created with the help of the
+                  </p>
+                  <h3><strong>User data</strong></h3>
+
+                  <p>
+                    We reseve the right to store and display user data as is
+                    required for our discord bot to function. If you want your
+                    data to be deleted in accordance with GDPR please contact us
+                    in the server or at juyeoncards@gmail.com. You can find more
+                    information in the privacy section on this website or using
+                    the privacy command.
+                  </p>
+
+                  <h3><strong>License</strong></h3>
+
+                  <p>
+                    Parts of this Discord Bot offer an opportunity for users to
+                    post and exchange opinions and information in certain areas
+                    of the Discord Bot. Juyeon does not filter, edit, publish or
+                    review content prior to their presence on the Discord Bot.
+                    Content do not reflect the views and opinions of Juyeon,its
+                    agents and/or affiliates. Comments reflect the views and
+                    opinions of the person who post their views and opinions. To
+                    the extent permitted by applicable laws, Juyeon shall not be
+                    liable for the content or for any liability, damages or
+                    expenses caused and/or suffered as a result of any use of
+                    and/or posting of and/or appearance of the content on this
+                    Discord Bot.
+                  </p>
+
+                  <p>
+                    Juyeon reserves the right to monitor all profiles and to
+                    remove any profiles which can be considered inappropriate,
+                    offensive or causes breach of these Terms and Conditions.
+                  </p>
+
+                  <p>You warrant and represent that:</p>
+
+                  <ul>
+                    <li>
+                      You are entitled to post the content on our Discord Bot
+                      and have all necessary licenses and consents to do so;
+                    </li>
+                    <li>
+                      The contents do not invade any intellectual property
+                      right, including without limitation copyright, patent or
+                      trademark of any third party;
+                    </li>
+                    <li>
+                      The contents do not contain any defamatory, libelous,
+                      offensive, indecent or otherwise unlawful material which
+                      is an invasion of privacy
+                    </li>
+                    <li>
+                      The contents will not be used to solicit or promote
+                      business or custom or present commercial activities or
+                      unlawful activity.
+                    </li>
+                  </ul>
+
+                  <p>
+                    You hereby grant Juyeon a non-exclusive license to use,
+                    reproduce, edit and authorize others to use, reproduce and
+                    edit any of your Comments in any and all forms, formats or
+                    media.
+                  </p>
+
+                  <h3><strong>Content Liability</strong></h3>
+
+                  <p>
+                    We shall not be hold responsible for any content that
+                    appears on your Discord Bot. You agree to protect and defend
+                    us against all claims that is rising on your Discord Bot. No
+                    link(s) should appear on any Discord Bot that may be
+                    interpreted as libelous, obscene or criminal, or which
+                    infringes, otherwise violates, or advocates the infringement
+                    or other violation of, any third party rights.
+                  </p>
+
+                  <h3>
+                    <strong>Removal of content from our Discord Bot</strong>
+                  </h3>
+
+                  <p>
+                    If you find any content on our Discord Bot that is offensive
+                    for any reason, you are free to contact and inform us any
+                    moment. We will consider requests to remove content but we
+                    are not obligated to or so or to respond to you directly
+                    unless legally obligated.
+                  </p>
+
+                  <p>
+                    We do not ensure that the information on this Discord Bot is
+                    correct, we do not warrant its completeness or accuracy; nor
+                    do we promise to ensure that the Discord Bot remains
+                    available or that the material on the Discord Bot is kept up
+                    to date.
+                  </p>
+
+                  <h3><strong>Disclaimer</strong></h3>
+
+                  <p>
+                    To the maximum extent permitted by applicable law, we
+                    exclude all representations, warranties and conditions
+                    relating to our Discord Bot and the use of this Discord Bot.
+                    Nothing in this disclaimer will:
+                  </p>
+
+                  <ul>
+                    <li>
+                      limit or exclude our or your liability for death or
+                      personal injury;
+                    </li>
+                    <li>
+                      limit or exclude our or your liability for fraud or
+                      fraudulent misrepresentation;
+                    </li>
+                    <li>
+                      limit any of our or your liabilities in any way that is
+                      not permitted under applicable law; or
+                    </li>
+                    <li>
+                      exclude any of our or your liabilities that may not be
+                      excluded under applicable law.
+                    </li>
+                  </ul>
                 </div>
               </div>
-            </div>
-            <div class="settings-wrapper">
-              <div class="wrapper_heading">SETTINGS</div>
-              <div class="settings">
-                <div class="filter">
-                  <div class="heading">CARD FILTER</div>
-                  <div class="filter-card animation-filter">
-                    <span>Animated Cards</span>
-                    <img src="/assets/check.png" alt="check" />
-                  </div>
-                  <div class="filter-card custom-filter">
-                    <!-- <input id="custom-filter" type="checkbox" /> -->
-                    <span>Custom Cards</span>
-                    <img src="/assets/check.png" alt="check" />
+              <div class="accordian">
+                <div class="header">
+                  <div class="name">Privacy Policy</div>
+                  <div class="toggler">
+                    <img src="/assets/downarray.png" alt="arrow" />
                   </div>
                 </div>
-                <div class="boost-card">
-                  <!-- <input id="custom-filter" type="checkbox" /> -->
-                  <div class="left">
-                    <img src="/assets/space-travel.png" alt="boost-mode" />
-                    FAST MODE
-                  </div>
-                  <div class="toggle_div">
-                    <div class="toggle_ball"></div>
-                  </div>
+                <div class="content">
+                  <!-- <h2>Privacy policy:</h2> -->
+
+                  <p>
+                    Usage of Minseo (Also referred to as the bot) requires the
+                    collection and storage of some user data (Refered to as
+                    "data" or "user data"). Using the bot is considered consent
+                    to the collection and storage of this data. We take your
+                    privacy seriously and you can read more about how we handle
+                    your data below. We will comply with the Discord ToS and any
+                    other applicable laws, such as GDPR.
+                  </p>
+
+                  <h4>What data is collected and why:</h4>
+                  <p>
+                    Data about which cards you have and you progression the bot
+                    is required to operate the bot. This information includes:
+                    Your discord user-id, you in-game stats (E.g. how much
+                    virtual money or seeds you have), which "items" you have,
+                    which "cards" you have.
+                    <br /><br />
+                    If you make use of the AI chat feature, the bot stores you
+                    last messages along with the bot's responses so that the bot
+                    can follow the conversation you are having. This applies
+                    only when you are actively chatting with the the bot using
+                    the commands to do so, and not other messages.
+                    <br /><br />
+                    Images that you have uploaded to the bot by making your own
+                    cards are stored by the bot in order to ensure that the bot
+                    can send the image back to you when you request it.
+                    <br /><br />
+                    The bot can log the usage of commands and other
+                    interactions, such as button presses, to ensure that the bot
+                    is working as intended and to prevent abuse. Additionally,
+                    it can log trades and other interactions with other users,
+                    exclusively through the bots commands. This is to prevent
+                    fraud, abuse and harrassment.
+                    <br /><br />
+                    Minseo does not read or log your messages, and does not
+                    store any excess data about you.
+                  </p>
+
+                  <h4>Access to the data:</h4>
+                  <p>
+                    The data is only accessible to the developer(s) of the bot,
+                    and is not shared with any any third parties unless legally
+                    required, or required to comply with terms of the Discord
+                    ToS. The data is only used to operate the bot, preventing
+                    abuse of the service and developement.
+                  </p>
+                  <br />
+                  <h3>You have a right to your data:</h3>
+                  <p>
+                    You have a right to at any time request a copy of the data
+                    stored about you. You also have a right to request the
+                    deletion of the data stored about you. Please see the
+                    contact section at the bottom of this page.
+                  </p>
+
+                  <h4>How the data is stored:</h4>
+                  <p>
+                    The data is stored in a databse file, which in turn is
+                    stored on an excrypted disk to ensure your privacy. Images
+                    for user-made cards are store on the local encrypted drive
+                    and is not avalible on the web. This data is currently
+                    stored in a datacenter in Finland. Off-site backups may also
+                    be stored, also encrypted and stored in a secure format.
+                    <br />
+                    The data as well as the operation of the bot is secured to
+                    prevent unauthorized access to the best of our ability, but
+                    we cannot accept legal liability for any unauthorized access
+                    to the data.
+                    <br />
+                    In the case of unauthorized access to the data, the
+                    developer will notify users as soon as possible though
+                    Discord.
+                  </p>
+
+                  <h4>AI message analysis:</h4>
+                  <p>
+                    The bot uses a machine learning algorithm to analyze the
+                    messages you send in the chat feature to prevent abuse and
+                    NSFW content. Such data may be processed by third party
+                    services such as openAI. The data does not include your
+                    personal information and is only sent to the third party
+                    services for processing. The data is not stored by the third
+                    party services and is only used to analyze the messages you
+                    send to the bot. Additionally, the bot can be used by server
+                    owners to moderate their servers. The bot can be configured
+                    to automatically log messages that are deemed to be NSFW,
+                    and can be configured to automatically delete messages that
+                    are deemed to be NSFW. This feature is opt-in and only logs
+                    the messages in the specific discord server, they are not
+                    shard with the bot developer(s).
+                  </p>
+                  <h4>Age requirement:</h4>
+                  <p>
+                    Users under the age of 13 are not permitted to use the bot
+                    as per the Discord ToS. We will not knowingly collect data
+                    from user under the age of 13. If a user under the age of 13
+                    is found to be using the bot, the data will be deleted as
+                    soon as possible and the user will be reported to Discord as
+                    well.
+                  </p>
+
+                  <h4>Contact &amp; requests:</h4>
+                  <p>
+                    If you have any concerns about privacy or the security of
+                    your data, requests for you data, requests of deletion or
+                    other questions please contact us in the support server by
+                    opening a ticket or by email at juyeoncards [AT] gmail [DOT]
+                    com . Also see the
+                    <a href="https://discord.com/terms"
+                      >Discord Terms of Service</a
+                    >
+                    for more information.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="glow"></div>
       </div>
     </main>
+    <div class="glow-blue">
+      <img src="/assets/home_glow.png" alt="glow" />
+    </div>
 
     <script type="module" src="./js/route.js"></script>
     <script type="module" src="./js/common.js"></script>
-    <script type="module" src="./js/pages/inventory.js"></script>
+    <script type="module" src="./js/pages/info.js"></script>
   </body>
 </html>

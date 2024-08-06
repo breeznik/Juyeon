@@ -1,0 +1,129 @@
+body {
+  background: var(--background-3);
+}
+.info-wrapper {
+  min-height: 84vh;
+  max-height: 84vh;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+  background: var(--background-4);
+  position: relative;
+  display: flex;
+  border: 0.5px solid #1f1f1f;
+  padding: 38px 62px;
+  overflow: auto;
+}
+
+.glow-blue {
+  top: 70px;
+  position: absolute;
+  filter: blur(100px);
+  z-index: -1;
+  img {
+    width: 100vw;
+    height: 70vh;
+  }
+}
+
+.pageHeading {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  .heading {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .content {
+    font-size: 16px;
+    opacity: 0.8;
+    letter-spacing: 1px;
+  }
+}
+
+.accordians {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  gap: 5px;
+  transition: all 0.3s ease-in-out;
+
+  .accordian {
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 17px;
+    display: flex;
+    flex-direction: column;
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+      img {
+        cursor: pointer;
+        width: 17px;
+        height: auto;
+        object-fit: contain;
+        transition: all 0.5s ease;
+      }
+    }
+    .content {
+      overflow: hidden;
+      opacity: 0;
+      transition: all 0.5s ease;
+      max-height: 0px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      h4 {
+        margin-bottom: 10px;
+      }
+      li {
+        margin: 5px 20px;
+      }
+      .chunk {
+        padding: 0px 29px;
+      }
+    }
+    &.active {
+      img {
+        transform: rotate(-180deg);
+      }
+
+      .content {
+        max-height: 100000000000px;
+        margin-top: 18px;
+        opacity: 1;
+        text-wrap: wrap;
+        h4 {
+          opacity: 0.8;
+        }
+        p,
+        ul {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .info-wrapper {
+    border-radius: 0px !important;
+    max-height: calc(100vh - 73px);
+    min-height: calc(100vh - 73px);
+    padding: 30px;
+  }
+  .info-container {
+    padding: 0;
+  }
+}

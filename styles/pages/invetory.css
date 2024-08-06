@@ -1,3 +1,7 @@
+body{
+  /* change this to change to background for page */
+  background: var(--background-3);
+}
 .glow {
   position: absolute;
   filter: blur(600px);
