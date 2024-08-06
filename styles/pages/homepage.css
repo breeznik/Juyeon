@@ -17,7 +17,8 @@ body {
   align-items: center;
   overflow: visible;
   height: 100%;
-  padding-bottom: 41px;
+  /* padding-bottom: 41px; */
+  min-height: calc(100vh - 130px);
 }
 
 .hero-section {
@@ -26,7 +27,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 40px;
   gap: 25px;
 
   .heading {
@@ -71,26 +72,20 @@ body {
 }
 
 .glow-blue {
-  background-color: #7cfefd;
-  opacity: 0.7;
-  width: 458px;
-  height: 458px;
-  top: -30%;
+  top: 70px;
   position: absolute;
   filter: blur(100px);
-  background-color: rgba(124, 254, 253, 0.3);
-  box-shadow: 0 0 10px rgba(124, 254, 253, 0.3),
-    0 0 20px rgba(124, 254, 253, 0.3), 0 0 30px rgba(124, 254, 253, 0.3);
-  border-radius: 10px;
-  padding: 20px;
   z-index: -1;
-  left: 20%;
+  img{
+    width: 100vw;
+    height: 70vh;
+  }
 }
 
 .stats {
   display: flex;
   gap: 30px;
-  margin-top: 73px;
+  margin-top: 50px;
   .state-card {
     border: 2px solid #212121;
     padding: 20px 30px;
@@ -149,8 +144,7 @@ body {
   padding: 20px 20px;
   text-align: center;
   border-radius: 15px;
-  margin-top: 30px;
-  margin-bottom: 40px;
+  margin: 25px 0px;
   font-weight: bold;
   cursor: pointer;
   border: var(--purple) 1px solid;
@@ -168,7 +162,7 @@ body {
 .scroll-wrapper {
   border-top: 2px solid #1f1f1f;
   background-color: #0f1010;
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100vw;
   overflow: hidden;
@@ -200,9 +194,9 @@ body {
   color: rgba(255, 255, 255, 0.4);
   border: 0.5px solid #1f1f1f;
   border-radius: 5px;
-  position: absolute;
+  /* position: absolute; */
   right: 0;
-  bottom: 60px;
+  /* bottom: 60px; */
   padding: 5px 10px;
 }
 
@@ -216,9 +210,9 @@ body {
 }
 
 @media (max-width: 1600px) {
-  .stamp {
+  /* .stamp {
     right: 50px;
-  }
+  } */
 }
 @media (max-width: 768px) {
   .hero-section {
@@ -255,11 +249,10 @@ body {
   }
   .stamp {
     position: relative;
-    right: 0;
     /* bottom: 43px; */
     /* margin: auto; */
     /* margin-bottom: 30px; */
-    margin-top: 60px;
+    /* margin-top: 60px; */
   }
 }
 @media (max-width: 576px) {

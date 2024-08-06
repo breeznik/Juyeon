@@ -1,5 +1,4 @@
-// import { toggleHandler } from "./inventory.js";
-
+// navigation variables
 const menu = document.querySelector(".navigation_toggler");
 const close = document.querySelector('.close')
 const reponsiveNav = document.querySelector(".responsive_naviagation");
