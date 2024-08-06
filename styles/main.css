@@ -249,14 +249,32 @@ nav .login {
     justify-content: center;
     opacity: 0;
   }
-  &.active{
+  /* &.active{
     display: flex ;
-  }
+  } */
   &:hover {
     .popup-logout {
       display: flex;
       height: 50px;
       opacity: 1;
+    }
+  }
+}
+nav {
+  &.active {
+    .login {
+      display: none;
+    }
+    .user_profile {
+      display: flex;
+    }
+    .responsive_naviagation {
+      .user_profile {
+        display: flex;
+      }
+      .login {
+        display: block;
+      }
     }
   }
 }
@@ -270,10 +288,12 @@ nav .login {
       height: 100%;
       object-fit: contain;
     }
-  } 
-  .user_profile{
-    &.active{
-      display: none ;
+  }
+  nav {
+    &.active {
+      .user_profile {
+        display: none;
+      }
     }
   }
 
@@ -320,7 +340,6 @@ nav .login {
       }
     }
     .user_profile {
-      display: flex;
       margin-bottom: 20px;
       padding: 0px;
     }

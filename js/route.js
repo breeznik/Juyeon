@@ -39,6 +39,7 @@ const loginButton = document.querySelector(".login");
 const ResponsiveLoginButton = document.querySelector(".responsive_login");
 const user_profile_display = document.querySelector(".user_profile");
 const popup_login = document.querySelector(".popup-logout");
+const nav = document.querySelector("nav");
 
 // Set your login status on this variable
 let user = localStorage.getItem("user");
@@ -73,15 +74,11 @@ const loginChecker = () => {
 };
 const logginerToggler = () => {
   if (isLoggedIn) {
-    // loginButton.innerText = logStatsuConst.logout;
-    loginButton.style.display = "none";
     ResponsiveLoginButton.innerText = logStatsuConst.logout;
-    user_profile_display?.classList.add("active");
+    nav.classList.add("active");
   } else {
-    loginButton.innerText = logStatsuConst.login;
-    loginButton.style.display = "block";
     ResponsiveLoginButton.innerText = logStatsuConst.login;
-    user_profile_display?.classList.remove("active");
+    nav.classList.remove("active");
   }
 };
 

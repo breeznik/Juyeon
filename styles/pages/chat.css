@@ -245,9 +245,7 @@ body{
     height: 70vh;
   }
 }
-.typing_user{
-  display: none;
-}
+
 @keyframes springIn {
     0% {
       transform: scale(0.5);

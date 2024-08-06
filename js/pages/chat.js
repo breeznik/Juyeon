@@ -10,7 +10,7 @@ const sampleObj = {
 const placeHolder_handler = (inputDiv, input_placheholder) => {
   const messagelength = inputDiv.textContent.length;
 
-  console.log(inputDiv.textContent.length, inputDiv.textContent[0]);
+  // console.log(inputDiv.textContent.length, inputDiv.textContent[0]);
   if (messagelength > 0) {
     input_placheholder.style.display = "none";
   } else {
@@ -125,8 +125,8 @@ const postMessageRerenderer = () => {
 const settingsToggler = () => {
   const ps_icon = document.querySelector(".ps_button");
   const ps_settings = document.querySelector(".profile_settings");
-  const btns = document.querySelector('.buttons');
-  const toggler = ()  =>{
+  const btns = document.querySelector(".buttons");
+  const toggler = () => {
     if (ps_settings.classList.contains("profile_settings_active")) {
       console.log("removed");
       ps_settings.classList.remove("profile_settings_active");
@@ -134,28 +134,91 @@ const settingsToggler = () => {
       console.log("added");
       ps_settings.classList.add("profile_settings_active");
     }
-  }
+  };
   ps_icon.addEventListener("click", toggler);
   btns.addEventListener("click", toggler);
 };
 
+const genreateTypingIndicator = () => {
+  const indicator = document.createElement("div");
+  indicator.classList.add("typing_user", "message-wrapper", "d-flex", "from-user", "color-lightgray");
+  indicator.innerHTML = `<div class="info">
+                    <div class="username">Breez_nik</div>
+                    <div class="message rounded-m flex-all">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="50px"
+                        height="20px"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle cx="18" cy="12" r="0" fill="currentColor">
+                          <animate
+                            attributeName="r"
+                            begin=".67"
+                            calcMode="spline"
+                            dur="1.5s"
+                            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+                            repeatCount="indefinite"
+                            values="0;2;0;0"
+                          />
+                        </circle>
+                        <circle cx="12" cy="12" r="0" fill="currentColor">
+                          <animate
+                            attributeName="r"
+                            begin=".33"
+                            calcMode="spline"
+                            dur="1.5s"
+                            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+                            repeatCount="indefinite"
+                            values="0;2;0;0"
+                          />
+                        </circle>
+                        <circle cx="6" cy="12" r="0" fill="currentColor">
+                          <animate
+                            attributeName="r"
+                            begin="0"
+                            calcMode="spline"
+                            dur="1.5s"
+                            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+                            repeatCount="indefinite"
+                            values="0;2;0;0"
+                          />
+                        </circle>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="profile">
+                    <img src="/assets/profile.png" alt="profile" />
+                  </div>`;
+  return indicator;
+};
 // JavaScript function to show/hide the typing indicator
-function setupTypingIndicator(inputId, indicatorId, timeout) {
+function setupTypingIndicator(inputId, timeout, messagesContainerId) {
   const inputElement = document.querySelector(inputId);
-  const indicatorElement = document.querySelector(indicatorId);
+  const indicatorElement = genreateTypingIndicator();
+  const messagesContainer  = document.querySelector(".messages");
   let typingTimeout;
 
   inputElement.addEventListener('input', () => {
-      // Show the typing indicator
-      indicatorElement.style.display = 'flex';
+      if (!messagesContainer.contains(indicatorElement)) {
+          messagesContainer.appendChild(indicatorElement);
+      }
 
-      // Clear the previous timeout
       clearTimeout(typingTimeout);
-
-      // Set a new timeout to hide the typing indicator
       typingTimeout = setTimeout(() => {
-          indicatorElement.style.display = 'none';
+          if (messagesContainer.contains(indicatorElement)) {
+              messagesContainer.removeChild(indicatorElement);
+          }
       }, timeout);
+  });
+
+  inputElement.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+          clearTimeout(typingTimeout);
+          if (messagesContainer.contains(indicatorElement)) {
+              messagesContainer.removeChild(indicatorElement);
+          }
+      }
   });
 }
 
@@ -163,5 +226,5 @@ document.addEventListener("DOMContentLoaded", () => {
   chatInputHandler();
   initialMessageRenderer();
   settingsToggler();
-  setupTypingIndicator('.input_div', '.typing_user', 1000);
+  setupTypingIndicator(".input_div",  1000);
 });
